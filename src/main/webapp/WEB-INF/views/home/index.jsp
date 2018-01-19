@@ -12,5 +12,6 @@
 </head>
 <body>
 <h1>Tweeter</h1>
+<a href="/user/register">Create new account</a>
 </body>
 </html>

@@ -15,9 +15,13 @@
     <title>Add new User</title>
 </head>
 <body>
-<form:form action="" method = "post">
-
-    
+<%--@elvariable id="user" type="pl.coderslab.entity.User"--%>
+<form:form action="/user/register" method = "post" modelAttribute="user">
+   Username <form:input path="username"/><br>
+    Email <form:input path="email"/><br>
+    Password <form:password path="password"/><br>
+    <form:errors path="*"/>
+    <input type="submit" value="send">
 </form:form>
 </body>
 </html>
