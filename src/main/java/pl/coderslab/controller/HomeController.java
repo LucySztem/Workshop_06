@@ -19,7 +19,16 @@ public class HomeController {
     private UserRepository userRepository;
 
     @GetMapping("")
-    public String index(){
+    public String home(HttpServletRequest request){
+
+        HttpSession session = request.getSession();
+
+        User user = (User) session.getAttribute("user");
+
+        if(user == null){
+            return "redirect:/user/login";
+        }
+
         return "home/login";
     }
 
